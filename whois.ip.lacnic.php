@@ -53,6 +53,7 @@ class lacnic_handler
 		                  );
 
 		$r = generic_parser_a($data_str, $translate, $contacts, 'network');
+    $r['owner']['organization'] = $r['network']['owner'];
 
 		unset($r['network']['owner']);
 		unset($r['network']['ownerid']);
